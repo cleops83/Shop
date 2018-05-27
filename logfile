@@ -1,0 +1,2 @@
+2018-05-27 17:50:17.094 CEST [4652] FATAL:  data directory "/Users/skywalker/Documents/Cleo's/Shop/shop" has group or world access
+2018-05-27 17:50:17.094 CEST [4652] DETAIL:  Permissions should be u=rwx (0700).
