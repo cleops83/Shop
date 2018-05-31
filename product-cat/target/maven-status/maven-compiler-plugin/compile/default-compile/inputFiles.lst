@@ -3,5 +3,6 @@
 /Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/entities/Category.java
 /Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/facades/CategoryFacade.java
 /Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/repositories/ProductRepository.java
-/Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/facades/CategoryDO.java
+/Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/objects/Item.java
 /Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/entities/Product.java
+/Users/skywalker/Documents/Cleo's/Shop/product-cat/src/main/java/com/shop/objects/ItemType.java

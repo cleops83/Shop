@@ -2,6 +2,7 @@ com/shop/facades/CategoryFacade.class
 com/shop/services/CategoryService.class
 com/shop/entities/Category.class
 com/shop/repositories/ProductRepository.class
-com/shop/facades/CategoryDO.class
+com/shop/objects/Item.class
 com/shop/entities/Product.class
 com/shop/repositories/CategoryRepository.class
+com/shop/objects/ItemType.class

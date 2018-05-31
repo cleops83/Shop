@@ -4,30 +4,35 @@ export default class App extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {categories: []};
+        this.state = {items: []};
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/api/categories')
+        fetch('http://localhost:8080/api/items')
             .then(results => {
                 return results.json()
             })
-            .then(categories => {
-                this.setState({categories});
+            .then(items => {
+                this.setState({items});
             })
     }
 
     render() {
         return (
-            <CategoryList categories={this.state.categories}/>
+            <ItemList items={this.state.items}/>
         )
     }
 }
 
-class CategoryList extends React.Component{
+const generateKey = () => {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
+
+
+class ItemList extends React.Component{
     render() {
-        var categories = this.props.categories.map(category =>
-            <Category key={category.id} category={category}/>
+        var items = this.props.items.map(item =>
+            <Item key={generateKey()} item={item}/>
         );
         return (
             <table>
@@ -35,20 +40,22 @@ class CategoryList extends React.Component{
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Type</th>
                 </tr>
-                {categories}
+                {items}
                 </tbody>
             </table>
         )
     }
 }
 
-class Category extends React.Component{
+class Item extends React.Component{
     render() {
         return (
             <tr>
-                <td>{this.props.category.id}</td>
-                <td>{this.props.category.name}</td>
+                <td>{this.props.item.id}</td>
+                <td>{this.props.item.name}</td>
+                <td>{this.props.item.type}</td>
             </tr>
         )
     }
