@@ -22,7 +22,7 @@
     "babel-preset-react": "^6.16.0",
     "react-addons-css-transition-group": "^0.14.8",
     "react-hot-loader": "^4.2.0",
-    "less": "^2.5.3",
+    "less": "^3.0.2",
     "less-loader": "^2.2.1",
     "style-loader": "^0.13.0",
     "css-loader": "^0.23.0",
