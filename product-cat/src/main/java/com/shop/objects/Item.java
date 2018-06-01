@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Item implements Serializable {
     private Long id;
     private String name;
-    private Item parent;
+    private Long parent;
     private String type;
 
     public Item(){
@@ -28,12 +28,12 @@ public class Item implements Serializable {
         this.name = name;
     }
 
-    public void setParent(Item parent) {
-        this.parent = parent;
+    public Long getParent() {
+        return parent;
     }
 
-    public Item getParent() {
-        return parent;
+    public void setParent(Long parent) {
+        this.parent = parent;
     }
 
     public String getType() {
