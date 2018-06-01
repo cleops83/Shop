@@ -9,6 +9,7 @@ import javax.persistence.*;
 public class Product {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     @Column(name = "name")

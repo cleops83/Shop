@@ -1,8 +1,9 @@
-com/shop/facades/CategoryFacade.class
-com/shop/services/CategoryService.class
+com/shop/util/Utils.class
+com/shop/facades/ProductCategoryFacade.class
 com/shop/entities/Category.class
 com/shop/repositories/ProductRepository.class
 com/shop/objects/Item.class
 com/shop/entities/Product.class
+com/shop/services/ProductCategoryService.class
 com/shop/repositories/CategoryRepository.class
 com/shop/objects/ItemType.class

@@ -1,7 +1,8 @@
 import 'react-sortable-tree/style.css';
 import React from 'react';
 import SortableTree, {
-    getTreeFromFlatData,
+    addNodeUnderParent,
+    getTreeFromFlatData, removeNodeAtPath,
 } from 'react-sortable-tree';
 
 
@@ -20,7 +21,7 @@ export default class App extends React.Component {
             .then(items => {
                 this.setState({treeData: getTreeFromFlatData({
                         flatData: items.map(item => ({
-                            id:item.id, title: item.name,parent:item.parent
+                            id:item.id, title: item.name,parent:item.parent,type:item.type
                         })),
                         getKey: item => item.id,
                         getParentKey: item => item.parent,
@@ -37,6 +38,20 @@ export default class App extends React.Component {
                     <SortableTree
                         treeData={this.state.treeData}
                         onChange={treeData => this.setState({ treeData })}
+                        generateNodeProps={({ node}) => ({
+                            buttons: [
+                                <button onClick={()=>alert(node.id + ' ' + node.title + ' ' +  node.parent +  ' ' + node.type)}>
+                                    Remove
+                                </button>,
+                            ],
+                            title: (
+                                <input style={{ fontSize: '1.1rem' }} value={node.title}
+                                       onChange={event => {
+                                           const title = event.target.value;
+                                           alert(title);
+                                       }}
+                                />),
+                        })}
                     />
                 </div>
             </div>

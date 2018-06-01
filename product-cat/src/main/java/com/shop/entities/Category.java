@@ -12,6 +12,7 @@ import java.util.List;
 @Entity
 public class Category{
     @Id
+    @GeneratedValue
     private Long id;
 
     @Column(name = "name")
