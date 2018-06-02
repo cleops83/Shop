@@ -9,7 +9,8 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name="product_seq", initialValue=100, sequenceName = "product_seq")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="product_seq")
     private Long id;
 
     @Column(name = "name")

@@ -95,4 +95,22 @@ public class ProductCategoryFacade {
     public void deleteProduct(long id) {
         service.deleteProduct(id);
     }
+
+    /**
+     * update existing category
+     * @param item
+     * @param id
+     */
+    public void updateCategory(Item item, long id) {
+        service.updateCategory(item, id);
+    }
+
+    /**
+     * update existing product
+     * @param item
+     * @param id
+     */
+    public void updateProduct(Item item, long id) {
+        service.updateProduct(item, id);
+    }
 }

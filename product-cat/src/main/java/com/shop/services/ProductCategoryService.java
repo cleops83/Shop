@@ -48,6 +48,25 @@ public class ProductCategoryService {
     }
 
     public void deleteProduct(long id) {
+
         productRepository.deleteById(id);
+    }
+
+    public void updateCategory(Item item, long id) {
+        Optional<Category> cat = categoryRepository.findById(id);
+        Category category = cat.get();
+        if(category != null) {
+            category.setName(item.getName());
+            categoryRepository.save(category);
+        }
+    }
+
+    public void updateProduct(Item item, long id) {
+        Optional<Product> prod = productRepository.findById(id);
+        Product product = prod.get();
+        if(product != null) {
+            product.setName(item.getName());
+            productRepository.save(product);
+        }
     }
 }
