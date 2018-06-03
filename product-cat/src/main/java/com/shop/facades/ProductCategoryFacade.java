@@ -71,6 +71,8 @@ public class ProductCategoryFacade {
 
                 for (Product p : c.getProducts()) {
                     Item productItem = Utils.createItem(p, null, c, ItemType.PRODUCT.name());
+                    productItem.setCurrency(p.getCurrency());
+                    productItem.setPrice(p.getPrice());
                     items.add(productItem);
                 }
 

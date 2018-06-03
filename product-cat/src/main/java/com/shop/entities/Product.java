@@ -19,6 +19,9 @@ public class Product {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "price")
+    private double price;
+
     @Column(name = "currency")
     private String currency;
 
@@ -48,6 +51,14 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getCurrency() {

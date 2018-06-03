@@ -1,2 +1,3 @@
 com/shop/application/ReactApplication.class
+com/shop/config/SwaggerConfig.class
 com/shop/resources/ProductCategoryResource.class

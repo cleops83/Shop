@@ -7,6 +7,8 @@ public class Item implements Serializable {
     private String name;
     private Long parent;
     private String type;
+    private String currency;
+    private double price;
 
     public Item(){
 
@@ -42,5 +44,21 @@ public class Item implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

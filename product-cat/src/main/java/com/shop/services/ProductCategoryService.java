@@ -39,6 +39,8 @@ public class ProductCategoryService {
         parent = categoryRepository.findById(item.getParent());
         Product product = new Product();
         product.setName(item.getName());
+        product.setPrice(item.getPrice());
+        product.setCurrency(item.getCurrency());
         product.setCategory(parent !=null ? parent.get() : null);
         return productRepository.save(product);
     }
@@ -48,7 +50,6 @@ public class ProductCategoryService {
     }
 
     public void deleteProduct(long id) {
-
         productRepository.deleteById(id);
     }
 
@@ -66,6 +67,8 @@ public class ProductCategoryService {
         Product product = prod.get();
         if(product != null) {
             product.setName(item.getName());
+            product.setCurrency(item.getCurrency());
+            product.setPrice(item.getPrice());
             productRepository.save(product);
         }
     }
