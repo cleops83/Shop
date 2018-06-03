@@ -26,7 +26,7 @@ public class Category{
     @OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Category> subcategories = new ArrayList<Category>();
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Product> products =  new ArrayList<Product>();
 
     public Long getId() {
